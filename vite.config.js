@@ -20,22 +20,6 @@ export default defineConfig({
       ]
     }
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'encoding': ['text-encoding'],
-          'util': ['browserify-aes', 'create-hash', 'create-hmac', 'ecurve', 'randombytes', 'bytebuffer'],
-          'chain': ['eosjs', 'eosjs-ecc', 'atomicassets', '@eoscafe/hyperion'],
-          'tailwind': ['tailwindcss', 'flowbite', '@headlessui/react'],
-          'ual-renderer': ['ual-reactjs-renderer'],
-          'ual-packages': ['ual-ledger', 'ual-scatter', 'ual-starteos', 'ual-wombat', 'ual-wax'],
-          'ual-anchor': ['ual-anchor'],
-        }
-      }
-    },
-    chunkSizeWarningLimit: 600,
-  },
   plugins: [
     NodeModulesPolyfillPlugin(),
     react(),
