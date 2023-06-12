@@ -1,0 +1,77 @@
+/* ChickenModal.css */
+.chicken-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+  
+  .chicken-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 300px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .chicken-image-modal {
+    width: 100%;
+    height: auto;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .level-up-button,
+  .unstake-button {
+    padding: 5px 10px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .level-up-button:hover,
+  .unstake-button:hover {
+    background-color: #283593;
+  }
+
+  .weapon-image-small {
+    width: 50px; /* adjust this value to your desired size */
+    height: auto;
+    border: 3px solid transparent; /* Add a transparent border to ensure the layout remains consistent */
+    transition: all 0.3s ease; /* Add a transition for a smooth hover effect */
+  }
+  
+  .weapon-image-small.selected {
+    border: 3px solid #ff9900;
+    box-shadow: 0 0 5px 2px rgba(255, 153, 0, 0.5);
+  }
+  
+  .weapon-image-small:hover {
+    border-color: #ff9900; /* Change the border color when hovering over the weapon */
+  }
+  
+  

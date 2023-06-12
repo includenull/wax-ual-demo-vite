@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-Login with WAX Cloud Wallet, Anchor or any of the other authenticators included.
+Login with WAX Cloud Assets, Anchor or any of the other authenticators included.

@@ -1,0 +1,25 @@
+.settings-container {
+    position: relative;
+    display: inline-block;
+    float: right;
+  }
+
+.settings-icon {
+  cursor: pointer;
+}
+
+.settings-window {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.settings-window label {
+  display: block;
+  margin-bottom: 10px;
+}

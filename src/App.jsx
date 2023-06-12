@@ -1,19 +1,23 @@
+import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import { JsonRpc } from 'eosjs';
 import { UALProvider } from 'ual-reactjs-renderer';
 import { Anchor } from 'ual-anchor';
 import { Wax } from 'ual-wax';
 import Main from './Main';
+import { useContext } from 'react';
+import { UALContext } from 'ual-reactjs-renderer';
+
 
 const App = () => {
   const appName = "wax-ual-demo";
 
   const chains = {
-    chainId: "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4",
+    chainId: "f16b1833c747c43682f4386fca9cbb327929334a762755ebec17f6f23c9b8a12",
     rpcEndpoints: [
       {
         protocol: 'https',
-        host: 'wax.greymass.com',
+        host: 'test.wax.eosusa.io',
         port: 443,
       }
     ],
@@ -21,6 +25,9 @@ const App = () => {
 
   const endpoint = `${chains.rpcEndpoints[0].protocol}://${chains.rpcEndpoints[0].host}:${chains.rpcEndpoints[0].port}`;
   const rpc = new JsonRpc(endpoint);
+  
+
+  const ual = useContext(UALContext);
 
   const anchor = new Anchor([chains], { appName: appName });
   const wcw = new Wax([chains]);
@@ -31,7 +38,9 @@ const App = () => {
       authenticators={[anchor, wcw]}
       chains={[chains]}
     >
-      <Main rpc={rpc} />
+      <BrowserRouter>
+      <Main rpc={rpc} ual={ual} />
+      </BrowserRouter>
     </UALProvider>
   );
 }

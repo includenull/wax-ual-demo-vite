@@ -1,0 +1,112 @@
+/* Chickens.css */
+.chicken-image {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #0c0b0b;
+}
+
+.chicken-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chickens-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chicken-item {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chicken-item.busy .chicken-image {
+  opacity: 0.5;
+}
+
+.busy-icon.visible {
+  visibility: visible;
+}
+
+.busy-icon {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+.chicken-item.highlighted .chicken-image {
+  border-color: #ff9900;
+}
+
+.image-container {
+  position: relative;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.details-button {
+  margin-top: 8px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 16px;
+  z-index: 2; /* Add this line */
+}
+
+
+.filter-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+}
+
+.filter-arrows {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-arrows button {
+  padding: 0;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.filter-option label {
+  margin-bottom: 0.25rem;
+}
+
+

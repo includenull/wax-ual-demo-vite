@@ -1,0 +1,62 @@
+.signup-box {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 1em;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .header-settings-container {
+    margin-left: 10px;
+  }
+  
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  background-color: #e5e5e5;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+}
+
+  
